@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+html {
+	font-family: "poppins", serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+	background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.navbar-links {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	list-style-type: none;
+}
+
+.navbar-links a {
+	text-decoration: none;
+	color: black;
+}
+
+.nav-contact-button {
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.navbar-links img {
+	width: 50px;
+    border-radius: 10px;
+}
+
+.profile-card {
+    margin: 100px auto;
+    width: 400px;
+    padding: 15px;
+    border: 1px solid #aaa;
+	border-radius: 15px;
+    box-shadow: 0px 0px 30px 10px #aaa;
+}
+
+.profile-table {
+	border-style: solid;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.profile-img {
+	border-radius: 15px;
+	width: 100%;
+}
+
+/* CONTACT STYLE */
+
+.contact-form {
+    width: 500px;
+    margin: 100px auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-field input, select, textarea {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ccc;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: orangered;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family: "poppins", serif;
+    cursor: pointer;
+}

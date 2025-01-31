@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>personal web</title>
+		<link rel="icon" href="profile.jpg" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav>
+			<ul class="navbar-links">
+				<img src="profile.jpg" alt="logo"/>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
+			<a class="nav-contact-button" href="contact.html">Contact Me</a>
+		</nav>
+
+		<form class="contact-form" onsubmit="submitForm()">
+			<div class="form-field">
+                <label for="name">Name</label>
+				<input id="name" type="text" required/>
+			</div>
+			<div class="form-field">
+                <label for="email">Email</label>
+				<input id="email" type="email" required/>
+			</div>
+			<div class="form-field">
+                <label for="subject">Subject</label>
+				<input id="subject" type="text" required/>
+			</div>
+			<div class="form-field">
+                <label for="skill">Skill</label>
+				<select id="skill" required>
+                    <option value="">select any skill...</option>
+					<option value="frontend">Frontend</option>
+					<option value="backend">Backend</option>
+				</select>
+			</div   >
+			<div class="form-field">
+                <label for="message">Message</label>
+				<textarea id="message" required></textarea>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+        <script src="contact-form.js"></script>
+	</body>
+</html>
