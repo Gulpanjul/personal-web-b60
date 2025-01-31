@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>personal web</title>
+		<link rel="icon" href="assets/img/profile.jpg" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav>
+			<ul class="navbar-links">
+				<img src="assets/img/logo.png" />
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="blog.html">Blog</a>
+				</li>
+			</ul>
+			<a class="nav-contact-button" href="contact.html">Contact Me</a>
+		</nav>
+
+		<!-- CREATE BLOG -->
+		<form id="create-blog" class="create-blog-form" onsubmit="addBlog(event)">
+			<h1>Create Blog</h1>
+
+			<div class="form-field">
+				<label for="title">title</label>
+				<input id="title" type="text" required />
+			</div>
+
+			<div class="form-field">
+				<label for="content">content</label>
+				<textarea id="content" rows="6" required></textarea>
+			</div>
+
+			<div class="form-field">
+				<label for="image">upload image</label>
+				<input id="image" type="file" required />
+			</div>
+
+			<div class="button-container">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+
+		<hr style="width: 90%; margin: 0 auto" />
+
+		<!-- BLOG LIST -->
+		<section id="blogList" class="blog-list">
+			<article class="blog-item">
+				<div class="blog-item-img">
+					<img src="assets/img/blog.jpg" alt="" />
+				</div>
+				<div class="blog-item-text">
+					<div class="blog-item-buttons">
+						<button class="blog-edit-button">Edit Blog</button>
+						<button class="blog-post-button">Post Blog</button>
+					</div>
+					<h1>Pasar Coding di Indonesia</h1>
+					<p>30 Jan 2025 11:22 WIB | Alex Josua</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+						ipsum possimus ab excepturi, dolores fugiat quasi dolorum saepe! Aut
+						aliquid nulla fugiat dolor voluptas quaerat illum obcaecati
+						dignissimos repellendus reprehenderit!
+					</p>
+				</div>
+			</article>
+		</section>
+
+		<script src="assets/js/blog.js"></script>
+	</body>
+</html>

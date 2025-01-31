@@ -92,3 +92,96 @@ nav {
     font-family: "poppins", serif;
     cursor: pointer;
 }
+
+/* CREATE BLOG FORM STYLES */
+
+.create-blog-form {
+    width: 500px;
+    margin: 30px auto;
+}
+
+.create-blog-form h1 {
+    text-align: center;
+}
+
+.button-container {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.create-blog-form button {
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    background-color: orangered;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* BLOG LIST STYLES */
+.blog-list {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.blog-item {
+    height: 250px;
+    padding: 15px;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.blog-item-img {
+    /* background-color: salmon; */
+    /* flex: 4; */
+}
+
+.blog-item-img img {
+    height: 100%;
+}
+
+.blog-item-text {
+    /* background-color: aquamarine; */
+    flex: 1;
+}
+
+.blog-item-buttons {
+    text-align: right;
+}
+
+.blog-edit-button {
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    background-color: #ccc;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.blog-post-button {
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    background-color: orangered;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* BLOG DETAIL STYLES */
+.blog-detail {
+    width: 60%;
+    margin: 40px auto;
+}
+
+.blog-detail img {
+    width: 100%;
+}
