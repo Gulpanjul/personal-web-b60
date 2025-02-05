@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Personal Web</title>
 		<link rel="icon" href="assets/img/profile.jpg" />
 		<link rel="stylesheet" href="assets/css/style.css" />
@@ -8,36 +10,123 @@
 	<body>
 		<!-- NAVBAR -->
 		<nav>
-			<ul class="navbar-links">
+			<div class="main-menu">
+				<ul class="navbar-links">
+					<img src="assets/img/logo.png" />
+					<li><a href="index.html" class="menu-active">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+				</ul>
+				<a class="nav-contact-button" href="contact.html">Contact Me</a>
+			</div>
+			<div class="mobile-menu">
 				<img src="assets/img/logo.png" />
-				<li><a href="index.html" class="menu-active">Home</a></li>
-				<li><a href="blog.html">Blog</a></li>
-			</ul>
-			<a class="nav-contact-button" href="contact.html">Contact Me</a>
+				<button id="hamburger-button" class="hamburger-button">☰</button>
+			</div>
 		</nav>
-
-		<!-- PROFILE CARD -->
-		<div class="profile-card">
-			<img class="profile-img" src="assets/img/profile.jpg" />
-			<h1 style="color: blue">Andhika Chandra Gulpa</h1>
-			<p style="color: gray">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-				exercitationem fugiat reiciendis autem illo officiis nobis ducimus
-				pariatur error, incidunt repellat sed ipsam soluta quam recusandae modi
-				blanditiis praesentium. Odit!
-			</p>
-			<table class="profile-table">
-				<tr>
-					<th style="border-style: solid">Experience</th>
-					<th style="border-style: solid">Year</th>
-				</tr>
-				<tr>
-					<td style="border-style: solid; text-align: center">
-						Digital Marketing
-					</td>
-					<td style="border-style: solid; text-align: center">2024</td>
-				</tr>
-			</table>
+		<div id="mobile-menu-list" class="mobile-menu-list mobile-menu-hide">
+			<a href="index.html" class="menu-active">Home</a>
+			<a href="blog.html">Blog</a>
+			<a href="contact.html">Contact Me</a>
 		</div>
+
+		<main class="main-content">
+			<!-- PROFILE CARD -->
+			<section id="profile-section">
+				<div class="profile-card">
+					<img class="profile-img" src="assets/img/profile.jpg" />
+					<h1 style="color: blue">Andhika Chandra Gulpa</h1>
+					<p style="color: gray">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
+						quisquam earum. Tempore voluptas obcaecati alias facere odit non!
+						Facere quas temporibus eligendi tenetur, numquam error!
+					</p>
+					<table class="profile-table">
+						<tr>
+							<th style="border-style: solid">Experience</th>
+							<th style="border-style: solid">Year</th>
+						</tr>
+						<tr>
+							<td style="border-style: solid; text-align: center">
+								Digital Marketing
+							</td>
+							<td style="border-style: solid; text-align: center">2024</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section id="introduction">
+				<div id="what-i-do">
+					<h1>What I do</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+						adipisci sunt iste ad quas fuga cupiditate, fugiat tenetur vitae
+						magnam, voluptatum consequatur! Earum beatae quibusdam blanditiis
+						praesentium alias eius expedita magnam sequi repellat inventore
+						corporis laboriosam, esse similique omnis soluta, exercitationem
+						aspernatur porro, consequuntur natus? Vitae odio corrupti saepe
+						earum.
+					</p>
+				</div>
+
+				<!-- technologies -->
+				<div id="tecnologies">
+					<div id="javascript">
+						<img
+							src="assets/img/javascript.svg"
+							style="width: 50px; color: aqua"
+						/>
+						<h2>Frontend Developer</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+							eveniet enim quidem blanditiis odit molestias!
+						</p>
+					</div>
+					<div id="version-control">
+						<img src="assets/img/github.svg" style="width: 50px" />
+						<h2>Version Control</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A esse
+							nostrum voluptates ullam rerum sequi ea. Illo, nobis! Pariatur
+							tenetur repudiandae totam quibusdam perspiciatis ipsa deleniti
+							iste aperiam, laborum corporis?
+						</p>
+					</div>
+					<div id="automated-deployment">
+						<img src="assets/img/netlify.svg" style="width: 50px" />
+						<h2>Automated Deployment</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+							quis dolorum esse, nemo illum consequuntur quaerat quo expedita
+							obcaecati sint, voluptatum consectetur numquam accusantium earum
+							ullam optio. Modi, nisi impedit.
+						</p>
+					</div>
+				</div>
+
+				<!-- social -->
+				<div id="socials">
+					<h2>Find Me on</h2>
+					<div>
+						<a href="#">
+							<img src="assets/img/facebook.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="assets/img/x.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="assets/img/instagram.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="assets/img/gmail.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="assets/img/whatapps.svg" alt="" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="assets/js/navbar.js"></script>
 	</body>
 </html>

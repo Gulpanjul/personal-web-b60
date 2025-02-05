@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>personal web</title>
 		<link rel="icon" href="assets/img/profile.jpg" />
 		<link rel="stylesheet" href="assets/css/style.css" />
@@ -8,34 +10,41 @@
 	<body>
 		<!-- NAVBAR -->
 		<nav>
-			<ul class="navbar-links">
+			<div class="main-menu">
+				<ul class="navbar-links">
+					<img src="assets/img/logo.png" />
+					<li><a href="index.html" class="menu-active">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+				</ul>
+				<a class="nav-contact-button" href="contact.html">Contact Me</a>
+			</div>
+			<div class="mobile-menu">
 				<img src="assets/img/logo.png" />
-				<li>
-					<a href="index.html">Home</a>
-				</li>
-				<li>
-					<a href="blog.html" class="menu-active">Blog</a>
-				</li>
-			</ul>
-			<a class="nav-contact-button" href="contact.html">Contact Me</a>
+				<button id="hamburger-button" class="hamburger-button">☰</button>
+			</div>
 		</nav>
+		<div id="mobile-menu-list" class="mobile-menu-list mobile-menu-hide">
+			<a href="index.html">Home</a>
+			<a href="blog.html" class="menu-active">Blog</a>
+			<a href="contact.html">Contact Me</a>
+		</div>
 
 		<!-- CREATE BLOG -->
 		<form id="create-blog" class="create-blog-form" onsubmit="addBlog(event)">
 			<h1>Create Blog</h1>
 
 			<div class="form-field">
-				<label for="title">title</label>
+				<label for="title">Title</label>
 				<input id="title" type="text" required />
 			</div>
 
 			<div class="form-field">
-				<label for="content">content</label>
+				<label for="content">Content</label>
 				<textarea id="content" rows="6" required></textarea>
 			</div>
 
 			<div class="form-field">
-				<label for="image">upload image</label>
+				<label for="image">Upload Image</label>
 				<input id="image" type="file" required />
 			</div>
 
@@ -50,7 +59,6 @@
 		<section
 			id="blogList"
 			class="blog-list"
-			style="background-color: darkgreen"
 		>
 			<article class="blog-item">
 				<div class="blog-item-img">
@@ -77,5 +85,6 @@
 		</section>
 
 		<script src="assets/js/blog.js"></script>
+		<script src="assets/js/navbar.js"></script>
 	</body>
 </html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>personal web</title>
 		<link rel="icon" href="assets/img/profile.jpg" />
 		<link rel="stylesheet" href="assets/css/style.css" />
@@ -8,13 +10,24 @@
 	<body>
 		<!-- NAVBAR -->
 		<nav>
-			<ul class="navbar-links">
-				<img src="assets/img/logo.png" alt="logo"/>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-			<a class="nav-contact-button" href="contact.html">Contact Me</a>
+			<div class="main-menu">
+				<ul class="navbar-links">
+					<img src="assets/img/logo.png" />
+					<li><a href="index.html" class="menu-active">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+				</ul>
+				<a class="nav-contact-button" href="contact.html">Contact Me</a>
+			</div>
+			<div class="mobile-menu">
+				<img src="assets/img/logo.png" />
+				<button id="hamburger-button" class="hamburger-button">☰</button>
+			</div>
 		</nav>
+		<div id="mobile-menu-list" class="mobile-menu-list mobile-menu-hide">
+			<a href="index.html">Home</a>
+			<a href="blog.html">Blog</a>
+			<a href="contact.html" class="menu-active">Contact Me</a>
+		</div>
 
 		<form class="contact-form" onsubmit="submitForm()">
 			<div class="form-field">
@@ -44,5 +57,6 @@
 			<button type="submit">Submit</button>
 		</form>
         <script src="contact-form.js"></script>
+		<script src="assets/js/navbar.js"></script>
 	</body>
 </html>

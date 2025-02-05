@@ -10,10 +10,34 @@ body {
 
 nav {
 	background-color: #eaeaea;
+	padding: 2px 40px;
+}
+
+nav img {
+	width: 50px;
+	border-radius: 10px;
+}
+
+.main-menu {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 2px 40px;
+}
+
+.mobile-menu {
+	display: none;
+}
+
+.mobile-menu-list {
+	display: none;
+}
+
+.hamburger-button {
+	font-size: 36px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
 }
 
 .navbar-links {
@@ -21,7 +45,7 @@ nav {
 	align-items: center;
 	gap: 40px;
 	list-style: none;
-    padding: 0;
+	padding: 0;
 }
 
 .menu-active {
@@ -42,15 +66,21 @@ nav {
 	border-radius: 10px;
 }
 
-.navbar-links img {
-	width: 50px;
-	border-radius: 10px;
+.main-content {
+	display: flex;
+	gap: 50px;
+	margin: 50px;
+}
+
+/* PROFILE CARD */
+#profile-section {
+	flex: 1;
 }
 
 .profile-card {
-	width: 400px;
-    padding: 15px;
-    margin: 100px auto;
+	/* width: 400px; */
+	padding: 15px;
+	/* margin: 100px auto; */
 
 	border: 1px solid #aaa;
 	border-radius: 15px;
@@ -69,6 +99,37 @@ nav {
 	width: 100%;
 }
 
+/* PROFILE INTRODUCTION */
+#introduction {
+	flex: 2.5;
+}
+
+#what-i-do h1 {
+	margin: 0;
+}
+
+#tecnologies {
+	display: flex;
+	gap: 20px;
+}
+
+#socials h2 {
+	margin-top: 0;
+}
+
+#socials a {
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+#socials a img {
+	width: 40px;
+
+	border: solid 2px gray;
+	padding: 8px;
+	border-radius: 100%;
+}
+
 /* CONTACT FORM STYLES */
 
 .contact-form {
@@ -84,7 +145,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 15px;
-    gap: 10px;
+	gap: 10px;
 }
 
 .form-field input,
@@ -98,7 +159,7 @@ textarea {
 }
 
 .contact-form button {
-    font-size: 16px;
+	font-size: 16px;
 	font-family: "Poppins", serif;
 	background-color: orangered;
 	color: white;
@@ -139,15 +200,15 @@ textarea {
 .blog-list {
 	width: 90%;
 	margin: 30px auto 300px;
-    background-color: salmon;
+	/* background-color: salmon; */
 }
 
 #blogList {
-	background-color: aquamarine;
+	/* background-color: aquamarine; */
 }
 
 .blog-item {
-	height: 300px;
+	/* height: 300px; */
 	padding: 15px;
 	border: 1px solid #aaa;
 	border-radius: 10px;
@@ -212,4 +273,82 @@ textarea {
 
 .blog-detail img {
 	width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+	nav {
+		padding: 2px 15px;
+	}
+
+	.main-menu {
+		display: none;
+	}
+
+	.menu-active {
+		background-color: orangered !important;
+		color: #fff;
+	}
+
+	.mobile-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.mobile-menu-show {
+		display: block;
+	}
+
+	.mobile-menu-hide {
+		display: none;
+	}
+
+	.mobile-menu-list a {
+		display: block;
+		text-decoration: none;
+		border: 1px solid #fff;
+		background-color: #aaa;
+		color: #fff;
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	.main-content {
+		flex-direction: column;
+	}
+
+	#introduction {
+		padding: 0 30px 30px;
+	}
+
+	#tecnologies {
+		flex-direction: column;
+	}
+
+	#tecnologies img {
+		width: 40px;
+		height: 40px;
+	}
+
+	#technologies h2 {
+		margin: 5px 0;
+	}
+
+	/* CONTACT FORM */
+	.contact-form {
+		width: 90%;
+	}
+
+	/* BLOG PAGE  */
+	.create-blog-form {
+		width: 90%;
+	}
+
+	.blog-item {
+		flex-direction: column;
+	}
+
+	.blog-item-img img {
+		width: 100%;
+	}
 }
