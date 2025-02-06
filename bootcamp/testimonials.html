@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Personal Web</title>
+		<link rel="icon" href="assets/img/profile.jpg" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/testimonials.css" />
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav>
+			<div class="main-menu">
+				<ul class="navbar-links">
+					<img src="assets/img/logo.png" />
+					<li><a href="index.html">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li>
+						<a href="testimonials.html" class="menu-active">Testimonials</a>
+					</li>
+				</ul>
+				<a class="nav-contact-button" href="contact.html">Contact Me</a>
+			</div>
+			<div class="mobile-menu">
+				<img src="assets/img/logo.png" />
+				<button id="hamburger-button" class="hamburger-button">☰</button>
+			</div>
+		</nav>
+		<div id="mobile-menu-list" class="mobile-menu-list mobile-menu-hide">
+			<a href="index.html">Home</a>
+			<a href="blog.html">Blog</a>
+			<a href="testimonials.html" class="menu-active">Testimonials</a>
+			<a href="contact.html">Contact Me</a>
+		</div>
+
+		<!-- MAIN CONTENT TESTIMONIALS -->
+		<main>
+			<h1 style="text-align: center">My Testimonials</h1>
+			<h3 style="text-align: center">Rating By Star</h3>
+
+			<!-- STAR BUTTONS-->
+			<div class="testimonial-star-buttons">
+				<button onclick="showAllTestimonials()">All</button>
+				<button onclick="filterTestimonialByStar(1)">1★</button>
+				<button onclick="filterTestimonialByStar(2)">2★</button>
+				<button onclick="filterTestimonialByStar(3)">3★</button>
+				<button onclick="filterTestimonialByStar(4)">4★</button>
+				<button onclick="filterTestimonialByStar(5)">5★</button>
+			</div>
+
+			<!-- TESTIMONIAL LIST -->
+			<div id="testimonialList" class="testimonial-list">
+				<!-- <article>
+					<img src="assets/img/profile.jpg" alt="" />
+					<p class="testimonial-item-caption">"Lorem, ipsum dolor."</p>
+					<p style="text-align: right">Andhika Chandra Gulpa</p>
+					<p style="text-align: right; font-weight: bold">5★</p>
+				</article> -->
+				<p>No testimonials.</p>
+			</div>
+		</main>
+
+		<script src="assets/js/navbar.js"></script>
+		<script src="assets/js/testimonials.js"></script>
+	</body>
+</html>
