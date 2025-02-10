@@ -16,6 +16,7 @@ nav {
 nav img {
 	width: 50px;
 	border-radius: 10px;
+	aspect-ratio: 1 / 1;
 }
 
 .main-menu {
@@ -286,7 +287,7 @@ textarea {
 
 	.menu-active {
 		background-color: orangered !important;
-		color: #fff;
+		color: #fff !important;
 	}
 
 	.mobile-menu {
