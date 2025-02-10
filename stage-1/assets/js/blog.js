@@ -63,7 +63,7 @@ function firstBlogContent() {
 	return `
         <article class="blog-item">
             <div class="blog-item-img">
-                <img src="assets/img/blog-img.png" alt="" />
+                <img src="assets/img/blog.jpg" alt="" />
             </div>
             <div class="blog-item-text">
                 <div class="blog-item-buttons">

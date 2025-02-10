@@ -1,12 +1,25 @@
 {
-  "name": "week-1",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+	"name": "personal-web",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon stage-1/server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Gulpanjul/personal-web-b60.git"
+	},
+	"keywords": [],
+	"author": "Andhika Chandra Gulpa",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Gulpanjul/personal-web-b60/issues"
+	},
+	"homepage": "https://github.com/Gulpanjul/personal-web-b60#readme",
+	"dependencies": {
+		"bootstrap": "^5.2.3",
+		"express": "^4.21.2"
+	},
+	"description": "My first personal-web"
 }
