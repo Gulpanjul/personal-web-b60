@@ -7,24 +7,22 @@ app.set("views", "stage-1/views");
 
 app.use(express.static("stage-1"));
 
+// HALAMAN HOME
 app.get("/", (req, res) => {
+	res.send("Hello express! Ini halaman utama");
 	res.render("index");
 });
 
-app.get("/contact", (req, res) => {
-	res.render("contact");
+// REQUEST PARAMS
+app.get("/about:id", (req, res) => {
+	const id = req.params.id;
+    res.send(`Halo! ini halaman tentang ${id}`);
 });
 
+// REQUEST QUERY
 app.get("/blog", (req, res) => {
-	res.render("blog");
-});
-
-app.get("/blog/detail", (req, res) => {
-	res.render("blog-detail");
-});
-
-app.get("/testimonials", (req, res) => {
-	res.render("testimonials");
+	const { title, author, year } = req.query;
+	res.send(`Ini halaman blog ${title} oleh ${author} tahun ${year}`);
 });
 
 app.listen(port, () => {

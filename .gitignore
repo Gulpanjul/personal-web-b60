@@ -1,4 +1,5 @@
-compare/
-task/
 node_modules 
 package-lock.json
+
+compare/
+task/

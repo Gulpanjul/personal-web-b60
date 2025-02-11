@@ -19,7 +19,8 @@
 	"homepage": "https://github.com/Gulpanjul/personal-web-b60#readme",
 	"dependencies": {
 		"bootstrap": "^5.2.3",
-		"express": "^4.21.2"
+		"express": "^4.21.2",
+		"hbs": "^4.2.0"
 	},
 	"description": "My first personal-web"
 }
