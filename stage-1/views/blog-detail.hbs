@@ -1,68 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>personal web</title>
-		<link rel="icon" href="assets/img/profile.jpg" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link
-			href="assets/css/bootstrap/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-			crossorigin="anonymous"
-		/>
-	</head>
-	<body>
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			<div class="container">
-				<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="logo" width="50"/></a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="/">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="blog">Blog</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="testimonials">Testimonials</a>
-						</li>
-					</ul>
-					<a class="btn btn-orangered" href="contact">Contact Me</a>
-				</div>
-			</div>
-		</nav>
+{{#> layout currentPage='Blog'}}
 
-		<!-- BLOG DETAIL SECTION -->
-		<article class="blog-detail">
-			<h1>Pasar Coding di Indonesia</h1>
+<!-- BLOG DETAIL SECTION -->
+<article class="blog-detail">
+	<h1>Pasar Coding di Indonesia</h1>
 
-			<p>30 Jan 2025 11:22 WIB | Andhika Chandra Gulpa</p>
+	<p>30 Jan 2025 11:22 WIB | Andhika Chandra Gulpa</p>
 
-			<img src="assets/img/web-version.jpg" alt="blog-image" />
+	<img src="assets/img/web-version.jpg" alt="blog-image" />
 
-			<p>
-				WEBSITE.CO.ID, LOKASI –– Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur perferendis alias excepturi dolorem laudantium eius consequuntur repellendus fugit, dolorum asperiores provident possimus id cumque non iusto praesentium labore amet itaque. Expedita assumenda accusantium iure ipsa vero debitis aliquid a fugit! Ea deserunt id architecto quas sunt et delectus, aut earum!
-			</p>
-		</article>
-		<script src="assets/js/navbar.js"></script>
-		<script
-			src="assets/js/bootstrap/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"
-		></script>
-	</body>
-</html>
+	<p>
+		WEBSITE.CO.ID, LOKASI –– Lorem ipsum dolor sit, amet consectetur adipisicing
+		elit. Consectetur perferendis alias excepturi dolorem laudantium eius
+		consequuntur repellendus fugit, dolorum asperiores provident possimus id
+		cumque non iusto praesentium labore amet itaque. Expedita assumenda
+		accusantium iure ipsa vero debitis aliquid a fugit! Ea deserunt id
+		architecto quas sunt et delectus, aut earum!
+	</p>
+</article>
+
+{{/ layout }}

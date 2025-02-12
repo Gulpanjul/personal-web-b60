@@ -1,159 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Personal Web</title>
-		<link rel="icon" href="assets/img/profile.jpg" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link
-			href="assets/css/bootstrap/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-			crossorigin="anonymous"
-		/>
-	</head>
-	<body>
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			<div class="container">
-				<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="logo" width="50"/></a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="/">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="blog">Blog</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="testimonials">Testimonials</a>
-						</li>
-					</ul>
-					<a class="btn btn-orangered" href="contact">Contact Me</a>
-				</div>
+{{#> layout currentPage='Home'}}
+
+<main class="main-content">
+	<!-- PROFILE CARD -->
+	<section id="profile-section">
+		<div class="profile-card">
+			<img class="profile-img" src="/img/profile.jpg" alt="profile-image" />
+			<h1 style="color: blue">Andhika Chandra Gulpa</h1>
+			<p style="color: gray">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quisquam
+				earum. Tempore voluptas obcaecati alias facere odit non! Facere quas
+				temporibus eligendi tenetur, numquam error!
+			</p>
+			<table class="table table-striped table-hover">
+				<tr>
+					<th scope="col">Experience</th>
+					<th scope="col">Year</th>
+				</tr>
+				<tr>
+					<td>
+						Digital Marketing
+					</td>
+					<td>2024</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section id="introduction">
+		<div id="what-i-do">
+			<h1>What I do</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+				adipisci sunt iste ad quas fuga cupiditate, fugiat tenetur vitae magnam,
+				voluptatum consequatur! Earum beatae quibusdam blanditiis praesentium
+				alias eius expedita magnam sequi repellat inventore corporis laboriosam,
+				esse similique omnis soluta, exercitationem aspernatur porro,
+				consequuntur natus? Vitae odio corrupti saepe earum.
+			</p>
+		</div>
+
+		<!-- technologies -->
+		<div id="tecnologies">
+			<div id="javascript">
+				<img src="/img/javascript.svg" style="width: 50px; color: aqua" />
+				<h2>Frontend Developer</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+					eveniet enim quidem blanditiis odit molestias!
+				</p>
 			</div>
-		</nav>
+			<div id="version-control">
+				<img src="/img/github.svg" style="width: 50px" />
+				<h2>Version Control</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. A esse
+					nostrum voluptates ullam rerum sequi ea. Illo, nobis! Pariatur tenetur
+					repudiandae totam quibusdam perspiciatis ipsa deleniti iste aperiam,
+					laborum corporis?
+				</p>
+			</div>
+			<div id="automated-deployment">
+				<img src="/img/netlify.svg" style="width: 50px" />
+				<h2>Automated Deployment</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis
+					dolorum esse, nemo illum consequuntur quaerat quo expedita obcaecati
+					sint, voluptatum consectetur numquam accusantium earum ullam optio.
+					Modi, nisi impedit.
+				</p>
+			</div>
+		</div>
 
-		<main class="main-content">
-			<!-- PROFILE CARD -->
-			<section id="profile-section">
-				<div class="profile-card">
-					<img
-						class="profile-img"
-						src="assets/img/profile.jpg"
-						alt="profile-image"
-					/>
-					<h1 style="color: blue">Andhika Chandra Gulpa</h1>
-					<p style="color: gray">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-						quisquam earum. Tempore voluptas obcaecati alias facere odit non!
-						Facere quas temporibus eligendi tenetur, numquam error!
-					</p>
-					<table class="table table-striped table-hover">
-						<tr>
-							<th scope="col">Experience</th>
-							<th scope="col">Year</th>
-						</tr>
-						<tr>
-							<td>
-								Digital Marketing
-							</td>
-							<td>2024</td>
-						</tr>
-					</table>
-				</div>
-			</section>
-			<section id="introduction">
-				<div id="what-i-do">
-					<h1>What I do</h1>
-					<p>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
-						adipisci sunt iste ad quas fuga cupiditate, fugiat tenetur vitae
-						magnam, voluptatum consequatur! Earum beatae quibusdam blanditiis
-						praesentium alias eius expedita magnam sequi repellat inventore
-						corporis laboriosam, esse similique omnis soluta, exercitationem
-						aspernatur porro, consequuntur natus? Vitae odio corrupti saepe
-						earum.
-					</p>
-				</div>
+		<!-- social -->
+		<div id="socials">
+			<h2>Find Me on</h2>
+			<div>
+				<a href="#">
+					<img src="/img/facebook.svg" alt="" />
+				</a>
+				<a href="#">
+					<img src="/img/x.svg" alt="" />
+				</a>
+				<a href="#">
+					<img src="/img/instagram.svg" alt="" />
+				</a>
+				<a href="#">
+					<img src="/img/gmail.svg" alt="" />
+				</a>
+				<a href="#">
+					<img src="/img/whatapps.svg" alt="" />
+				</a>
+			</div>
+		</div>
+	</section>
+</main>
 
-				<!-- technologies -->
-				<div id="tecnologies">
-					<div id="javascript">
-						<img
-							src="assets/img/javascript.svg"
-							style="width: 50px; color: aqua"
-						/>
-						<h2>Frontend Developer</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-							eveniet enim quidem blanditiis odit molestias!
-						</p>
-					</div>
-					<div id="version-control">
-						<img src="assets/img/github.svg" style="width: 50px" />
-						<h2>Version Control</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A esse
-							nostrum voluptates ullam rerum sequi ea. Illo, nobis! Pariatur
-							tenetur repudiandae totam quibusdam perspiciatis ipsa deleniti
-							iste aperiam, laborum corporis?
-						</p>
-					</div>
-					<div id="automated-deployment">
-						<img src="assets/img/netlify.svg" style="width: 50px" />
-						<h2>Automated Deployment</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-							quis dolorum esse, nemo illum consequuntur quaerat quo expedita
-							obcaecati sint, voluptatum consectetur numquam accusantium earum
-							ullam optio. Modi, nisi impedit.
-						</p>
-					</div>
-				</div>
-
-				<!-- social -->
-				<div id="socials">
-					<h2>Find Me on</h2>
-					<div>
-						<a href="#">
-							<img src="assets/img/facebook.svg" alt="" />
-						</a>
-						<a href="#">
-							<img src="assets/img/x.svg" alt="" />
-						</a>
-						<a href="#">
-							<img src="assets/img/instagram.svg" alt="" />
-						</a>
-						<a href="#">
-							<img src="assets/img/gmail.svg" alt="" />
-						</a>
-						<a href="#">
-							<img src="assets/img/whatapps.svg" alt="" />
-						</a>
-					</div>
-				</div>
-			</section>
-		</main>
-
-		<script src="assets/js/navbar.js"></script>
-		<script
-			src="assets/js/bootstrap/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"
-		></script>
-	</body>
-</html>
+{{/ layout }}

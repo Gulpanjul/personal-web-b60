@@ -9,14 +9,14 @@ function addBlog(event) {
 
 	let imageFileName = URL.createObjectURL(image.files[0]);
 
-	let blog = {
+	let newBlog = {
 		title: title,
 		content: content,
 		image: imageFileName,
 		author: "Andhika Chandra Gulpa",
 		postedAt: new Date(),
 	};
-	blogs.push(blog);
+	blogs.push(newBlog);
 
 	console.log(blogs);
 

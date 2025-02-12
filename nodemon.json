@@ -1,0 +1,8 @@
+{
+    "ext": "js, hbs",
+    "ignore": [
+        "node_modules",
+        "public"
+    ],
+    "exec": "node ./stage-1/server.js"
+}
