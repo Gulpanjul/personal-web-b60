@@ -1,10 +1,20 @@
 const express = require("express");
 const app = express();
-const port = 3000;
 const hbs = require("hbs");
 const path = require("path");
+const methodOverride = require("method-override");
 
+const {
+	renderBlog,
+	renderBlogDetail,
+	renderBlogEdit,
+	createBlog,
+	updateBlog,
+	deleteBlog,
+} = require("./controllers/controller-v1");
 const { formatDateToWIB, getRelativeTime } = require("./utils/time");
+
+const port = 3000;
 
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "./views"));
@@ -13,6 +23,7 @@ app.set("views", path.join(__dirname, "./views"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("stage-1/assets"));
+app.use(methodOverride("_method"));
 
 hbs.registerPartials(__dirname + "/views/partials", function (err) {});
 hbs.registerHelper("equal", function (a, b) {
@@ -20,8 +31,6 @@ hbs.registerHelper("equal", function (a, b) {
 });
 hbs.registerHelper("formatDateToWIB", formatDateToWIB);
 hbs.registerHelper("getRelativeTime", getRelativeTime);
-
-let blogs = [];
 
 // HOME
 app.get("/", (req, res) => {
@@ -34,40 +43,27 @@ app.get("/contact", (req, res) => {
 });
 
 // BLOG
-app.get("/blog", (req, res) => {
-	console.log(blogs);
-	res.render("blog-list", { blogs: blogs });
-});
+app.get("/blog", renderBlog);
 
-// CREATE BLOG PAGE
+// RENDER CREATE BLOG
 app.get("/blog-create", (req, res) => {
 	res.render("blog-create");
 });
 
 // SUBMIT NEW BLOG
-app.post("/blog-create", (req, res) => {
-	const { title, content } = req.body;
-	console.log(title);
+app.post("/blog-create", createBlog);
 
-	let imageFileName = "";
+// RENDER EDIT BLOG
+app.get("/blog-edit/:id", renderBlogEdit);
 
-	let newBlog = {
-		title: title,
-		content: content,
-		image: imageFileName,
-		author: "Andhika Chandra Gulpa",
-		postedAt: new Date(),
-	};
+// SUBMIT/SAVE EDITED BLOG
+app.patch("/blog-update/:id", updateBlog);
 
-	blogs.push(newBlog);
-
-	res.redirect("/blog");
-});
+// DELETE EXISTING BLOG
+app.delete("/blog/:id", deleteBlog);
 
 // BLOG DETAIL
-app.get("/blog/detail", (req, res) => {
-	res.render("blog-detail");
-});
+app.get("/blog/:id", renderBlogDetail);
 
 // TESTIMONIALS
 app.get("/testimonials", (req, res) => {

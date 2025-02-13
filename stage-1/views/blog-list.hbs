@@ -7,28 +7,6 @@
 		<a href="/blog-create" class="blog-post-button" style=";">Create Blog</a>
 	</div>
 	<section id="blogList" class="blog-list">
-		<article class="blog-item">
-			<div class="blog-item-img">
-				<img src="/img/blog.jpg" alt="" />
-			</div>
-			<div class="blog-item-text">
-				<div class="blog-item-buttons">
-					<button class="blog-edit-button">Edit Blog</button>
-					<button class="blog-post-button">Post Blog</button>
-				</div>
-				<a href="blog-detail.html" style="text-decoration: none">
-					<h1 class="blog-item-title">Pasar Coding di Indonesia</h1>
-				</a>
-				<p>30 Jan 2025 11:22 WIB | Andhika Chandra Gulpa</p>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
-					laudantium eos dicta at amet illo libero impedit rem, quaerat
-					perspiciatis aspernatur, est quisquam. Quasi saepe adipisci labore nemo
-					blanditiis recusandae?
-				</p>
-				<p class="blog-item-relative-time">1 day ago</p>
-			</div>
-		</article>
 
 		{{#each blogs}}
 		<article class="blog-item">
@@ -37,10 +15,12 @@
 			</div>
 			<div class="blog-item-text">
 				<div class="blog-item-buttons">
-					<button class="blog-edit-button">Edit Blog</button>
-					<button class="blog-post-button">Post Blog</button>
+					<a href="/blog-edit/{{@index}}" class="btn btn-primary">Edit Blog</a>
+					<form style="display: inline;" action="/blog/{{@index}}?_method=DELETE" method="post">
+						<button onclick="return confirm('Are you sure want to delete?')" class="btn btn-danger" type="submit">Delete Blog</button>
+					</form>
 				</div>
-				<a href="blog-detail.html" style="text-decoration: none">
+				<a href="/blog/{{@index}}" style="text-decoration: none">
 					<h1 class="blog-item-title">{{this.title}}</h1>
 				</a>
 				<p>{{formatDateToWIB this.postedAt}} | {{this.author}}</p>
