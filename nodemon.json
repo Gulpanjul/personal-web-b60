@@ -4,5 +4,5 @@
         "node_modules",
         "public"
     ],
-    "exec": "node ./stage-1/server.js"
+    "exec": "node ./server.js"
 }

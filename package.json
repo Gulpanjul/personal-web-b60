@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon ./stage-1/server.js"
+		"start": "nodemon ./server.js"
 	},
 	"repository": {
 		"type": "git",
@@ -21,7 +21,13 @@
 		"bootstrap": "^5.2.3",
 		"express": "^4.21.2",
 		"hbs": "^4.2.0",
-		"method-override": "^3.0.0"
+		"method-override": "^3.0.0",
+		"pg": "^8.13.3",
+		"pg-hstore": "^2.3.4",
+		"sequelize": "^6.37.5"
 	},
-	"description": "My first personal-web"
+	"description": "My first personal-web",
+	"devDependencies": {
+		"sequelize-cli": "^6.6.2"
+	}
 }

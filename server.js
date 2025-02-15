@@ -22,7 +22,7 @@ app.set("views", path.join(__dirname, "./views"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("stage-1/assets"));
+app.use(express.static("assets"));
 app.use(methodOverride("_method"));
 
 hbs.registerPartials(__dirname + "/views/partials", function (err) {});

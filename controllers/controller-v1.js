@@ -1,3 +1,7 @@
+const { Sequelize, QueryTypes } = require("sequelize");
+const config = require("../config/config.json");
+
+const sequelize = new Sequelize(config.development);
 let blogs = [
 	{
 		title: "Pasar Coding di Indonesia",
@@ -21,7 +25,10 @@ let blogs = [
 	},
 ];
 
-function renderBlog(req, res) {
+async function renderBlog(req, res) {
+	const blogs = await sequelize.query(`SELECT * FROM public."Blogs" `, {
+		type: QueryTypes.SELECT,
+	});
 	// console.log(blogs);
 	res.render("blog-list", {
 		blogs: blogs,
@@ -39,7 +46,7 @@ function renderBlogDetail(req, res) {
 function createBlog(req, res) {
 	const { title, content } = req.body; // tittle dan content adalah properti milik req.body
 	console.log("judulnya adalah", title);
-    console.log("contentnya :", content);
+	console.log("contentnya :", content);
 
 	let imageFileName = "";
 
@@ -65,12 +72,12 @@ function renderBlogEdit(req, res) {
 }
 
 function updateBlog(req, res) {
-    const id = req.params.id;
+	const id = req.params.id;
 	const { title, content } = req.body; // tittle dan content adalah properti milik req.body
 	console.log("judul baru :", title);
-    console.log("content baru :", content);
+	console.log("content baru :", content);
 
-    let imageFileName = "";
+	let imageFileName = "";
 
 	let updateBlog = {
 		title: title,
@@ -80,9 +87,9 @@ function updateBlog(req, res) {
 		postedAt: new Date(),
 	};
 
-    blogs[id] = updateBlog;
+	blogs[id] = updateBlog;
 
-    res.redirect("/blog");
+	res.redirect("/blog");
 }
 
 function deleteBlog(req, res) {

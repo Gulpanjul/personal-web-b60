@@ -23,9 +23,9 @@
 				<a href="/blog/{{@index}}" style="text-decoration: none">
 					<h1 class="blog-item-title">{{this.title}}</h1>
 				</a>
-				<p>{{formatDateToWIB this.postedAt}} | {{this.author}}</p>
+				<p>{{formatDateToWIB this.createdAt}} | {{this.authorId}}</p>
 				<p>{{this.content}}</p>
-				<p class="blog-item-relative-time">{{getRelativeTime this.postedAt}}</p>
+				<p class="blog-item-relative-time">{{getRelativeTime this.createdAt}}</p>
 			</div>
 		</article>
 		{{/each}}
