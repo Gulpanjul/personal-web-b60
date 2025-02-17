@@ -1,5 +1,6 @@
 const { Sequelize, QueryTypes } = require("sequelize");
 const config = require("../config/config.json");
+const { query } = require("express");
 
 const sequelize = new Sequelize(config.development);
 let blogs = [
@@ -26,68 +27,85 @@ let blogs = [
 ];
 
 async function renderBlog(req, res) {
-	const blogs = await sequelize.query(`SELECT * FROM public."Blogs" `, {
-		type: QueryTypes.SELECT,
-	});
+	const blogs = await sequelize.query(
+		`SELECT * FROM "Blogs" ORDER BY "createdAt" DESC`,
+		{
+			type: QueryTypes.SELECT,
+		}
+	);
 	// console.log(blogs);
 	res.render("blog-list", {
 		blogs: blogs,
 	});
 }
 
-function renderBlogDetail(req, res) {
-	const id = req.params;
-	const blogYangDiPilih = blogs[id];
-	// console.log(blogYangDiPilih);
+async function renderBlogDetail(req, res) {
+	const id = req.params.id;
 
-	res.render("blog-detail", { blog: blogYangDiPilih });
+	const query = `SELECT * FROM "Blogs" WHERE id = ${id}`;
+	const blogYangDiPilih = await sequelize.query(query, {
+		type: QueryTypes.SELECT,
+	});
+	console.log("hasil query : ", blogYangDiPilih[0]);
+
+	res.render("blog-detail", { blog: blogYangDiPilih[0] });
 }
 
-function createBlog(req, res) {
+async function createBlog(req, res) {
 	const { title, content } = req.body; // tittle dan content adalah properti milik req.body
 	console.log("judulnya adalah", title);
 	console.log("contentnya :", content);
 
 	let imageFileName = "";
 
-	let newBlog = {
-		title: title,
-		content: content,
-		image: imageFileName,
-		author: "Andhika Chandra Gulpa",
-		postedAt: new Date(),
-	};
+	let query = `INSERT INTO public."Blogs" ("title", "content", "image") VALUES ('${title}', '${content}', '${imageFileName}') `;
 
-	blogs.push(newBlog);
+	const newBlog = await sequelize.query(query, {
+		type: QueryTypes.INSERT,
+	});
+
+	// blogs.push(newBlog);
 
 	res.redirect("/blog");
 }
 
-function renderBlogEdit(req, res) {
+async function renderBlogEdit(req, res) {
 	const id = req.params.id;
-	const blogYangDiPilih = blogs[id];
-	console.log(blogYangDiPilih);
 
-	res.render("blog-edit", { blog: blogYangDiPilih, index: id });
+	const query = `SELECT * FROM "Blogs" WHERE id = ${id}`;
+	const blogYangDiPilih = await sequelize.query(query, {
+		type: QueryTypes.SELECT,
+	});
+	console.log("hasil query : ", blogYangDiPilih[0]);
+
+	res.render("blog-edit", { blog: blogYangDiPilih[0] });
 }
 
-function updateBlog(req, res) {
+async function updateBlog(req, res) {
 	const id = req.params.id;
 	const { title, content } = req.body; // tittle dan content adalah properti milik req.body
 	console.log("judul baru :", title);
 	console.log("content baru :", content);
 
-	let imageFileName = "";
+	const query = `UPDATE "Blogs" SET title = '${title}', content = '${content}' WHERE id = ${id}`;
 
-	let updateBlog = {
-		title: title,
-		content: content,
-		image: imageFileName,
-		author: "Andhika Chandra Gulpa",
-		postedAt: new Date(),
-	};
+	const updateResult = await sequelize.query(query, {
+		type: QueryTypes.UPDATE,
+	});
 
-	blogs[id] = updateBlog;
+	console.log("update result : ", updateResult);
+
+	// let imageFileName = "";
+
+	// let updateBlog = {
+	// 	title: title,
+	// 	content: content,
+	// 	image: imageFileName,
+	// 	author: "Andhika Chandra Gulpa",
+	// 	postedAt: new Date(),
+	// };
+
+	// blogs[id] = updateBlog;
 
 	res.redirect("/blog");
 }

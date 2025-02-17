@@ -5,13 +5,16 @@ const path = require("path");
 const methodOverride = require("method-override");
 
 const {
-	renderBlog,
-	renderBlogDetail,
 	renderBlogEdit,
 	createBlog,
 	updateBlog,
-	deleteBlog,
 } = require("./controllers/controller-v1");
+
+const {
+	renderBlog,
+	renderBlogDetail,
+	deleteBlog,
+} = require("./controllers/controller-v2");
 const { formatDateToWIB, getRelativeTime } = require("./utils/time");
 
 const port = 3000;
@@ -68,6 +71,10 @@ app.get("/blog/:id", renderBlogDetail);
 // TESTIMONIALS
 app.get("/testimonials", (req, res) => {
 	res.render("testimonials");
+});
+
+app.get("*", (req, res) => {
+	res.render("page-404");
 });
 
 app.listen(port, () => {
