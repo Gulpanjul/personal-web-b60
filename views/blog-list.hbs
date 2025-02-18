@@ -24,6 +24,7 @@
 					<h1 class="blog-item-title">{{this.title}}</h1>
 				</a>
 				<p>{{formatDateToWIB this.createdAt}} | {{this.authorId}}</p>
+				<p>Last edit : {{formatDateToWIB this.updatedAt}}</p>
 				<p>{{this.content}}</p>
 				<p class="blog-item-relative-time">{{getRelativeTime this.createdAt}}</p>
 			</div>
