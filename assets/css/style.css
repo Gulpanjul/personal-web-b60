@@ -79,6 +79,23 @@ nav img {
 	margin: 50px;
 }
 
+/* AUTHENTICATION */
+.auth-form {
+	width: 400px;
+	margin: 30px auto;
+}
+
+.auth-form button {
+	font-size: 16px;
+	font-family: "Poppins", serif;
+	background-color: orangered;
+	color: white;
+	padding: 10px 25px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
 /* PROFILE CARD */
 #profile-section {
 	flex: 1;

@@ -20,7 +20,13 @@
 						href="/testimonials">Testimonials</a>
 				</li>
 			</ul>
-			<a class="btn btn-orangered" href="/contact">Contact Us</a>
+			<div>
+				{{#if user}}
+				<span class="me-3">Selamat datang, {{user.name}}</span>
+				<a href="/logout" class="me-3">Logout</a>
+				{{/if}}
+				<a class="btn btn-orangered" href="/contact">Contact Us</a>
+			</div>
 		</div>
 	</div>
 </nav>
