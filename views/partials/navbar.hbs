@@ -21,6 +21,9 @@
 				</li>
 			</ul>
 			<div>
+				{{#unless user}}
+				<a href="/login" class="me-3">Login</a>
+				{{/unless}}
 				{{#if user}}
 				<span class="me-3">Selamat datang, {{user.name}}</span>
 				<a href="/logout" class="me-3">Logout</a>
